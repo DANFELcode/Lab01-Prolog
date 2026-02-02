@@ -20,14 +20,3 @@ vuelo(medellin, barranquilla).
 vuelo(pasto, bogota).
 vuelo(bogota, pasto).
 
-%¿Existe un vuelo directo de Bogotá a Medellín?.
-% ?- vuelo(bogota, medellin). si existe
-
-%¿Qué destinos se pueden alcanzar directamente desde Bogotá?.
-% ?- vuelo(bogota, X). medellin, bogota, pasto
-
-%¿Desde que destinos se puede alcanzar Medellin?	
-% ?- vuelo(X, medellin). desde Bogota
-
-%¿Hay alguna forma de llegar directamente a cali?
-% ?- vuelo(X, cali). No la hay
