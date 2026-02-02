@@ -75,13 +75,10 @@ amante_animales(X):-tiene_perro(X),tiene_gato(X).
 mascota_compartida(X,Y):-dueno(X,Z),dueno(Y,Z).
 
 %Define una regla tipo_mascota que asocie una persona con el tipo de mascota que tiene (perro, gato, ave, etc.).
-tiene_animal(X):-tiene_perro(X);tiene_gato(X);tiene_ave(X).
-tipo_mascota(X):-tiene_animal(X).
+tipo_mascota(X,perro):-tiene_perro(X).
+tipo_mascota(X,gato):-tiene_gato(X).
+tipo_mascota(X,ave):-tiene_ave(X).
+
 
 	
-
-
-
-
-
 
