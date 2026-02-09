@@ -27,7 +27,6 @@ distancia((X1, Y1), (X2, Y2), D) :- D is sqrt((X2-X1)**2 + (Y2-Y1)**2).
 % Caso base: lista vacía o con un solo punto -> distancia 0
 distancia_total([], 0).
 distancia_total([_], 0).
-distancia_total([P1, P2 | Resto], Total) :- distancia(P1,P2) + distancia(PA, distancia_total([
-
+distancia_total([P1, P2 | Resto], Total) :- distancia(P1, P2, D), distancia_total([P2 | Resto], RestoTotal), Total is D + RestoTotal.
 
 
